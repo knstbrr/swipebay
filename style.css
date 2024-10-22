@@ -107,7 +107,7 @@ img {
     width: 50vw; /* Breite der Suchleiste */
     padding: 10px; /* Innenabstand */
     border: 2px solid #007bff; /* Randfarbe */
-    border-radius: 5px 5px 5px 5px; /* Abgerundete Ecken */
+    border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
     outline: none; /* Entfernt den Standard-Rahmen */
     font-size: 16px; /* Schriftgröße */
     transition: border-color 0.3s; /* Sanfte Randfarbe beim Hover */
