@@ -20,6 +20,8 @@ body {
 }
 
 #swipe-container {
+    width: 1920px;
+    heigt: 1080px;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
