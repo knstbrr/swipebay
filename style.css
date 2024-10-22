@@ -21,7 +21,6 @@ body {
 
 #swipe-container {
     position: relative;
-    height: 70vh;
     margin: 0 auto;
     overflow: hidden;
 }
