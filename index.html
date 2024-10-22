@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="swipebaystyle.css">
+    <title>Swipebay</title>
+    <input type="text" placeholder="Search in Swipebay...">
+</head>
+<body>
+
+    <div id="swipe-container">
+        <!-- Karten mit Bildern -->
+        <div class="card hidden" data-id="1">
+            <img src="tisch.jpg" alt="Bild 1">
+        </div>
+        <div class="card hidden" data-id="2">
+            <img src="rasenmaeher.jpg" alt="Bild 2">
+        </div>
+        <div class="card hidden" data-id="3">
+            <img src="stuhl.jpg" alt="Bild 3">
+        </div>
+        <!-- Weitere Karten können hr hinzugefügt werden -->
+    </div>
+
+    <!-- Script mit Swipe-Funktionalität -->
+    <script src="swipe.js"></script>
+
+</body>
+
+<!-- Footer mit Navigation un Cookie-Reset Button -->
+<footer>
+    <button>Konto</button>
+    <button>Anzeige erstellen</button>
+    <button>Swipen</button>
+    <button>Nachrichten</button>
+    <button>Merkliste</button>
+    <!-- Button zum Zurückset6en dr Cookies -->
+    <button id="reset-cookies">Cookies zurücksetzen</button>
+</footer>
+
+</html>
