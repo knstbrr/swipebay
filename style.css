@@ -15,11 +15,14 @@ input {
 body {
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 926px;
+    width: 428px;
     background-color: #f0f0f0;
 }
 
 #swipe-container {
+    width: 428px; /* Breite der Icons */
+    height: 926px; /* Höhe der Icons */
     position: relative;
     margin: 0 auto;
     overflow: hidden;
