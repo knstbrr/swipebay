@@ -109,17 +109,3 @@ img {
     border-color: #0056b3; /* Farbänderung beim Fokussieren */
 }
 
-.search-button {
-    padding: 5px 10px; /* Innenabstand */
-    border: none; /* Kein Rand */
-    background-color: #007bff; /* Hintergrundfarbe */
-    color: white; /* Schriftfarbe */
-    border-radius: 0 5px 5px 0; /* Abgerundete Ecken */
-    cursor: pointer; /* Zeigt an, dass es klickbar ist */
-    font-size: 16px; /* Schriftgröße */
-    transition: background-color 0.3s; /* Sanfte Farbänderung beim Hover */
-}
-
-.search-button:hover {
-    background-color: #0056b3; /* Dunklere Farbe beim Hover */
-}
