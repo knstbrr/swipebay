@@ -20,6 +20,10 @@ body {
     height: 400px;
     background-color: #f0f0f0;
 }
+.cookie-button {
+    display: flex;
+    justify-content: center;
+}
 
 #swipe-container {
     width: 428px; /* Breite der Icons */
