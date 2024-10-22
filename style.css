@@ -21,8 +21,8 @@ body {
 
 #swipe-container {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 70vw;
+    height: 70vh;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -96,7 +96,7 @@ img {
 }
 
 .search-input {
-    width: 300px; /* Breite der Suchleiste */
+    width: 50vw; /* Breite der Suchleiste */
     padding: 10px; /* Innenabstand */
     border: 2px solid #007bff; /* Randfarbe */
     border-radius: 5px 0 0 5px; /* Abgerundete Ecken */
