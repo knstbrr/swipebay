@@ -20,8 +20,8 @@ body {
 }
 
 #swipe-container {
-    width: 360px;
-    heigt: 740px;
+    width: 428px; /* Breite der Icons */
+    height: 926px; /* Höhe der Icons */
     position: relative;
     margin: 0 auto;
     overflow: hidden;
