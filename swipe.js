@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setCookie('swipedCards', JSON.stringify(swipedCards), 7);
     }
 
-    // Lese die geswipten Karten aus dem Cookie
+    // Lese die geswipten Karten us dem Cookie
     function getSwipedCardsFromCookie() {
         let swipedCards = getCookie('swipedCards');
         return swipedCards ? JSON.parse(swipedCards) : [];

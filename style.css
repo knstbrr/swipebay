@@ -17,17 +17,17 @@ body {
     width: 100vw;
     justify-content: center;
     align-items: center;
-    height: 926px;
-    width: 428px;
+    height: 400px;
     background-color: #f0f0f0;
 }
 
 #swipe-container {
     width: 428px; /* Breite der Icons */
-    height: 926px; /* Höhe der Icons */
+    height: 400px; /* Höhe der Icons */
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    text-align: center;
 }
 
 .card {
@@ -94,7 +94,7 @@ img {
 
 .search-container {
     display: flex; /* Flexbox für Anordnung */
-    justify-content: center; /* Zentriert die Suchleiste */
+    text-align: center;
     margin: 20px; /* Abstand um die Suchleiste */
     text-align: center;
 }
