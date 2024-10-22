@@ -26,6 +26,7 @@ body {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    text-align: center;
 }
 
 .card {
@@ -92,7 +93,7 @@ img {
 
 .search-container {
     display: flex; /* Flexbox für Anordnung */
-    justify-content: center; /* Zentriert die Suchleiste */
+    text-align: center;
     margin: 20px; /* Abstand um die Suchleiste */
 }
 
