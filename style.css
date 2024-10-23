@@ -22,6 +22,7 @@ body {
     width: 100vw;
     overflow: hidden;
     background-color: #383838;
+    position: fixed;
 }
 
 #navigation {
@@ -126,6 +127,7 @@ body {
     perspective-origin: center 110%;
     transform-style: preserve-3d;
     position: relative;
+    display: flex;
   }
   
   .card {
@@ -134,7 +136,7 @@ body {
     position: absolute;
     border-radius: 20px;
     overflow: hidden;
-    transform: translateZ(calc(-30px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i)));
+    transform: translateZ(calc(-3px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i)));
     filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
     cursor: pointer;
     user-select: none;
