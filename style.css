@@ -144,6 +144,6 @@ img {
     border: 2px solid #007bff;
 }
 
-h1, p {
+.heading {
     text-align: center;
 }
