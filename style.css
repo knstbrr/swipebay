@@ -38,7 +38,6 @@ body {
     background-color: #fff; /* Hintergrundfarbe */
     display: flex; /* Flexbox für die Anordnung */
     justify-content: space-around; /* Gleiche Abstände zwischen den Links */
-    padding: 10px 0; /* Abstand oben und unten */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
     z-index: 1000; /* Damit das Menü über anderen Elementen bleibt */
 }
