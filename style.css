@@ -219,6 +219,9 @@ body {
     margin-left: 5px;
     display: flex;
     align-content: flex-start;
-    font-size: 28px;
     opacity: 0.85;
+  }
+
+  .heading h1 {
+    font-size: 28px;
   }
