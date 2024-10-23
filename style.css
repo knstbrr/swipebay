@@ -35,7 +35,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #383838; /* Hintergrundfarbe */
+    background-color: 383838; /* Hintergrundfarbe */
     display: flex; /* Flexbox für die Anordnung */
     justify-content: space-around; /* Gleiche Abstände zwischen den Links */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
@@ -92,6 +92,7 @@ body {
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
     margin-top: 8vh;
     margin-left: 15vw;
+    color: white;
 }
 
 .registration form {
@@ -101,16 +102,19 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    color: white;
 }
 
 .registration input {
-    border: 2px solid #cccccc;
+    border: 2px solid white;
     font-size: 16px;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
+    background-color: #383838;
+    color: white;
 }
 
 .registration button {
-    background-color: #eaf4ff;
+    background-color: white;
     border: 2px solid #ffffff;
 }
 
