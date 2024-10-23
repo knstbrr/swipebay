@@ -9,17 +9,34 @@
         <h1>Registrierung</h1>
         </div>
     <div class="registration">
-    <form method="post" action='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-        <label for="first-name">Vorname: <input id="first-name" name="first-name" type="text" required placeholder="Max"/></label>
-        <label for="last-name">Nachname: <input id="last-name" name="last-name" type="text" required placeholder="Mustermensch"/></label>
-        <label for="birthday">Geburtstag: <input id="birthday" name="birthday" type="date" required min="23-10-2007"/></label>
-        <label for="email">Email: <input id="email" name="email" type="email" required placeholder="maxmustermensch@gmail.com"/></label>
-        <label for="new-password">Passwort erstellen: <input id="new-password" name="new-password" type="password" required /></label>
-        <label for="terms-and-conditions">
-        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Ich akzeptiere die <a href="agb.html">AGB und Datenschutzbestimmungen</a>
-          </label>
-          <input type="submit" value="Registrieren" />
-    </form>
+        <form method="post" action='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+            <label for="first-name">Vorname: <input id="first-name" name="first-name" type="text" required placeholder="Max"/></label>
+            <label for="last-name">Nachname: <input id="last-name" name="last-name" type="text" required placeholder="Mustermensch"/></label>
+            <label for="birthday">Geburtstag: 
+                <input id="birthday" name="birthday" type="date" required />
+            </label>
+            <label for="email">Email: <input id="email" name="email" type="email" required placeholder="maxmustermensch@gmail.com"/></label>
+            <label for="new-password">Passwort erstellen: <input id="new-password" name="new-password" type="password" required /></label>
+            <label for="terms-and-conditions">
+                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Ich akzeptiere die <a href="agb.html">AGB und Datenschutzbestimmungen</a>
+            </label>
+            <input type="submit" value="Registrieren" />
+        </form>
+        
+        <script>
+            // Berechne das Datum vor 18 Jahren
+            const today = new Date();
+            const eighteenYearsAgo = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+            
+            // Berechne das Datum vor 120 Jahren
+            const oneHundredTwentyYearsAgo = new Date(today.getFullYear() - 120, today.getMonth(), today.getDate());
+        
+            // Setze das Mindest- und Höchstdatum für das Geburtsdatum
+            const birthdayInput = document.getElementById('birthday');
+            birthdayInput.min = oneHundredTwentyYearsAgo.toISOString().split('T')[0];
+            birthdayInput.max = eighteenYearsAgo.toISOString().split('T')[0];
+        </script>
+        
       </div>
     
 <footer>
