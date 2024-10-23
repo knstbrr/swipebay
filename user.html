@@ -11,11 +11,11 @@
     <div class="registration">
         <form method="post" action='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
             <label for="first-name"><input id="first-name" name="first-name" type="text" required placeholder="Vorname"/></label>
+            
             <label for="last-name"><input id="last-name" name="last-name" type="text" required placeholder="Nachname"/></label>
-            <label for="birthday">Geburtstag: 
-                <input id="birthday" name="birthday" type="date" required placeholder="Genburtstag"/>
-            </label>
-            <label for="email"><input id="email" name="email" type="email" required placeholder="email"/></label>
+            <label><input type="text" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="Geburtstag (TT.MM.JJJJ)" />
+                </label>
+            <label for="email"><input id="email" name="email" type="email" required placeholder="Email"/></label>
             <label for="new-password"><input id="new-password" name="new-password" type="password" required placeholder="Passwort erstellen"/></label>
             <label for="terms-and-conditions">
                 <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Ich akzeptiere die <a href="agb.html">AGB und Datenschutzbestimmungen</a>
