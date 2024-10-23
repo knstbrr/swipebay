@@ -73,7 +73,7 @@ class Card {
     const rotate = this.#offsetX * 0.1;
     this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
     // dismiss card
-    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.7) {
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
     }
   }
@@ -114,7 +114,7 @@ class Card {
     document.removeEventListener('touchend', this.#handleTouchEnd);
     document.removeEventListener('touchmove', this.#handleTouchMove);
     this.element.style.transition = 'transform 1s';
-    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${90 * direction}deg)`;
+    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${75 * direction}deg)`;
     this.element.classList.add('dismissing');
     setTimeout(() => {
       this.element.remove();
