@@ -114,10 +114,10 @@ body {
 }
 
 #swiper {
-    height: 70vh;
+    height: 65vh;
     aspect-ratio: 2 / 3;
     perspective: 1000px;
-    perspective-origin: center 50%;
+    perspective-origin: center 110%;
     transform-style: preserve-3d;
     position: relative;
   }
@@ -133,6 +133,8 @@ body {
     cursor: pointer;
     user-select: none;
     transition: transform 0.5s;
+    margin-left: 9vw;
+    margin-top: 10vw;
   }
   
   .card img {
@@ -164,20 +166,18 @@ body {
   }
   
   #like {
-    color: red;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: greenyellow;
   }
   
   #dislike {
-    color: #ccc;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: red;
   }
   
   @keyframes animation1 {
   
     0%,
     100% {
-      opacity: 0.2;
+      opacity: 0.5;
     }
   
     50% {
@@ -189,7 +189,7 @@ body {
   
     0%,
     100% {
-      opacity: 0.2;
+      opacity: 0.5;
     }
   
     50% {
