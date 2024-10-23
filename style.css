@@ -195,3 +195,20 @@ body {
       opacity: 1;
     }
   }
+
+  .symbol{
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+  }
+
+  .symbol img {
+    height: auto;
+    width: 50vw;
+    opacity: 0.5;
+  }
+
+  .description {
+    text-align: center;
+    opacity: 0.5;
+  }
