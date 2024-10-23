@@ -10,18 +10,12 @@
         <h1>Erstelle eine Anzeige</h1>
         <p>Bitte folgende Informationen angeben:</p>
         </div>
-        <footer>
-            <div id="navigation"></div> <!-- Container für den Footer -->
-        
-            <script>
-              fetch('footer.html')  // Pfad zur footer.html
-                .then(response => response.text())  // Inhalt als Text lesen
-                .then(data => {
-                  document.getElementById('navigation').innerHTML = data;  // Footer in den Container einfügen
-                })
-                .catch(error => console.error('Fehler beim Laden des Footers:', error));
-            </script>
-            
-        </footer>
+        <div id="navigation">
+            <a href="user.html"><img src="ui/user.png"></a>
+            <a href="add.html"><img src="ui/add.png"></a>
+            <a href="index.html"><img src="ui/swipe.png"></a>
+            <a href="messages.html"><img src="ui/messages.png"></a>
+            <a href="heart.html"><img src="ui/heart.png"></a>
+        </div>
 </body>
     </html>
