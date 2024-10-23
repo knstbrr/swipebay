@@ -111,6 +111,7 @@ body {
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
     background-color: #383838;
     color: white;
+    padding: 5px;
 }
 
 .registration button {
