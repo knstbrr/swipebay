@@ -90,6 +90,8 @@ body {
     width: 50vw;
     padding: 10px;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
+    margin-left: 17vw;
+    margin-top: 7vh;
 }
 
 .registration form {
@@ -216,5 +218,5 @@ body {
   .heading {
     display: flex;
     align-content: flex-start;
-    
+
   }
