@@ -147,7 +147,7 @@ body {
     font-size: 16vh;
     border-radius: 50%;
     padding: 20px;
-    position: relative;
+    position: absolute;
     z-index: 1;
     animation-name: animation1;
     animation-duration: 1s;
@@ -155,6 +155,7 @@ body {
     animation-fill-mode: both;
     /* don't run animation at the beginning */
     animation-play-state: paused;
+    transform: translateY(-50%); /* Vertikales Zentrieren */
   }
   
   #like.trigger,
