@@ -212,3 +212,9 @@ body {
     text-align: center;
     opacity: 0.5;
   }
+
+  .heading {
+    display: flex;
+    align-content: flex-start;
+    
+  }
