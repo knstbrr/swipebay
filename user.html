@@ -7,35 +7,93 @@
 <body>
     <div class="heading">
         <h1>Registrierung</h1>
+
+
         </div>
-    <div class="registration">
-        <form method="post" action='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-            <label for="first-name"><input id="first-name" name="first-name" type="text" required placeholder="Vorname"/></label>
-            
-            <label for="last-name"><input id="last-name" name="last-name" type="text" required placeholder="Nachname"/></label>
-            <label><input type="text" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required placeholder="Geburtstag (TT-MM-JJJJ)" />
+        <div class="registration">
+            <form method="post" action="ui/wichtig!.mp4" id="registration-form">
+                <label for="first-name">
+                    <input id="first-name" name="first-name" type="text" required placeholder="Vorname" />
                 </label>
-            <label for="email"><input id="email" name="email" type="email" required placeholder="Email"/></label>
-            <label for="new-password"><input id="new-password" name="new-password" type="password" required placeholder="Passwort erstellen"/></label>
-            <label for="terms-and-conditions">
-                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Ich akzeptiere die <a href="agb.html">AGB und Datenschutzbestimmungen</a>
-            </label>
-            <input type="submit" value="Registrieren" />
-        </form>
+                <label for="last-name">
+                    <input id="last-name" name="last-name" type="text" required placeholder="Nachname" />
+                </label>
+                <label for="birthday">
+                    <input id="birthday" name="birthday" type="text" required pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" placeholder="Geburtstag (TT.MM.JJJJ)" />
+                </label>
+                <label for="email">
+                    <input id="email" name="email" type="email" required placeholder="Email" />
+                </label>
+                <label for="new-password">
+                    <input id="new-password" name="new-password" type="password" required placeholder="Passwort erstellen" />
+                </label>
+                <label for="terms-and-conditions">
+                    <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Ich akzeptiere die 
+                    <a href="agb.html">AGB und Datenschutzbestimmungen</a>
+                </label>
+                <input type="submit" value="Registrieren" />
+            </form>
+        </div>
         
         <script>
-            // Berechne das Datum vor 18 Jahren
-            const today = new Date();
-            const eighteenYearsAgo = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
-            
-            // Berechne das Datum vor 120 Jahren
-            const oneHundredTwentyYearsAgo = new Date(today.getFullYear() - 120, today.getMonth(), today.getDate());
+            document.getElementById('registration-form').addEventListener('submit', function(event) {
+                const birthdayInput = document.getElementById('birthday').value;
+                const pattern = /^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/;
         
-            // Setze das Mindest- und Höchstdatum für das Geburtsdatum
-            const birthdayInput = document.getElementById('birthday');
-            birthdayInput.min = oneHundredTwentyYearsAgo.toISOString().split('T')[0];
-            birthdayInput.max = eighteenYearsAgo.toISOString().split('T')[0];
+                // Prüfe, ob das Datum das Format TT.MM.JJJJ hat
+                if (!pattern.test(birthdayInput)) {
+                    alert("Bitte geben Sie das Datum im Format TT.MM.JJJJ ein.");
+                    event.preventDefault();  // Verhindert das Absenden des Formulars
+                    return false;
+                }
+        
+                // Teile die Eingabe in Tag, Monat und Jahr
+                const [day, month, year] = birthdayInput.split('.').map(Number);
+        
+                // Prüfe, ob das Datum gültig ist (existiert z.B. der 31. Februar?)
+                const inputDate = new Date(year, month - 1, day);
+                if (inputDate.getDate() !== day || inputDate.getMonth() + 1 !== month || inputDate.getFullYear() !== year) {
+                    alert("Ungültiges Datum. Bitte geben Sie ein gültiges Datum ein.");
+                    event.preventDefault();  // Verhindert das Absenden des Formulars
+                    return false;
+                }
+        
+                // Berechnung des heutigen Datums
+                const today = new Date();
+        
+                // Berechnung des minimalen und maximalen Datums
+                const minDate = new Date(today.getFullYear() - 120, today.getMonth(), today.getDate());
+                const maxDate = new Date(today.getFullYear() - 16, today.getMonth(), today.getDate());
+        
+                // Formatierung für die Fehlermeldungen (DD.MM.YYYY)
+                const formatDate = (date) => {
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const year = date.getFullYear();
+                    return `${day}.${month}.${year}`;
+                };
+        
+                // Prüfen, ob das eingegebene Datum innerhalb des gültigen Bereichs liegt
+                if (inputDate < minDate) {
+                    alert("Aus technischen Gründen müssen Sie jünger als 120 Jahre sein (" + formatDate(minDate) + ").");
+                    event.preventDefault();  // Verhindert das Absenden des Formulars
+                    return false;
+                }
+        
+                if (inputDate > maxDate) {
+                    alert("Unsere jüngsten Nutzer müssen am " + formatDate(maxDate) + " Geburtstag haben, da sie sonst jünger als 16 wären!");
+                    event.preventDefault();  // Verhindert das Absenden des Formulars
+                    return false;
+                }
+        
+                return true;  // Wenn alles in Ordnung ist, wird das Formular abgesendet
+            });
         </script>
+        
+        
+
+
+
         
       </div>
     
