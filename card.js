@@ -118,7 +118,7 @@ class Card {
     this.element.classList.add('dismissing');
     setTimeout(() => {
       this.element.remove();
-    }, 1000);
+    }, 500);
     if (typeof this.onDismiss === 'function') {
       this.onDismiss();
     }
