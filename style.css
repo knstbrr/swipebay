@@ -23,11 +23,6 @@ body {
     overflow: hidden;
     background-color: #383838;
 }
-.cookie-button {
-    display: flex;
-    justify-content: center;
-}
-
 
 #navigation {
     height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
