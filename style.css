@@ -90,16 +90,17 @@ body {
     width: 50vw;
     padding: 10px;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
-    margin-left: 17vw;
-    margin-top: 7vh;
+    margin-top: 8vh;
+    margin-left: 15vw;
 }
 
 .registration form {
     border: 2px solid #007bff;
     border-radius: 20px 20px 20px 20px; /* Abgerundete Ecken */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 20px;
-    
-
 }
 
 .registration input {
