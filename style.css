@@ -229,11 +229,16 @@ body {
     font-size: 28px;
   }
 
-  .ui {
-    display: flex;
-  }
 
   #like {
     float: right;
     margin-left: 40vw;
+    margin-top: 4vh;
   }
+
+  #dislike {
+    float: left;
+    margin-top: 4vh;
+    margin-left: -4vw;
+  }
+
