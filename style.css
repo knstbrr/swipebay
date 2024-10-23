@@ -30,7 +30,7 @@ body {
 
 
 #navigation {
-    height: 8vh; /* Mindesthöhe des Footers, die du anpassen kannst */
+    height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
     position: fixed; /* Fixiert das Menü am unteren Rand */
     bottom: 0;
     left: 0;
