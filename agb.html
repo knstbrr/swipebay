@@ -19,6 +19,36 @@
     p {
         margin-bottom: 8px;
     }
+    #navigation {
+    height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
+    position: fixed; /* Fixiert das Menü am unteren Rand */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Hintergrundfarbe */
+    display: flex; /* Flexbox für die Anordnung */
+    justify-content: space-around; /* Gleiche Abstände zwischen den Links */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
+    z-index: 1000; /* Damit das Menü über anderen Elementen bleibt */
+}
+
+#navigation a {
+    text-decoration: none; /* Entfernt Unterstreichung */
+    flex: 1; /* Macht jedes Link gleich breit */
+    display: flex; /* Flexbox für die Bildzentrierung */
+    justify-content: center; /* Zentriert die Bilder innerhalb der Links */
+    align-items: center; /* Vertikale Zentrierung der Bilder */
+}
+
+#navigation img {
+    width: 35px; /* Breite der Icons */
+    height: 35px; /* Höhe der Icons */
+    transition: transform 0.2s; /* Sanfte Animation beim Hover */
+}
+
+#navigation img:hover {
+    transform: scale(1.1); /* Vergrößerung beim Hover */
+}
 </style>
 <body>
     <h1>Allgemeine Geschäftsbedingungen (AGB) für Swipebay</h1>
@@ -77,5 +107,14 @@
     <p>10.4. Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Dies gilt auch für die Änderung dieser Schriftformklausel.</p>
 
     <p>Diese AGB gelten ab dem 01. Januar 2024.</p>
+    <footer>
+        <div id="navigation">
+            <a href="user.html"><img src="ui/user.png"></a>
+            <a href="add.html"><img src="ui/add.png"></a>
+            <a href="index.html"><img src="ui/swipe.png"></a>
+            <a href="messages.html"><img src="ui/messages.png"></a>
+            <a href="heart.html"><img src="ui/heart.png"></a>
+        </div>
+    </footer>
 </body>
 </html>
