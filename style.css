@@ -119,6 +119,7 @@ img {
 }
 
 .registration {
+    display: flex;
     font-size: 16px; /* Schriftgröße */
     transition: border-color 0.3s; /* Sanfte Randfarbe beim Hover */
     text-align: center;
@@ -143,3 +144,6 @@ img {
     border: 2px solid #007bff;
 }
 
+h1, p {
+    text-align: center;
+}
