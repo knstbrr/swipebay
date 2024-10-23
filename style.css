@@ -96,6 +96,9 @@ body {
 
 .registration form {
     border: 2px solid #007bff;
+    border-radius: 20px 20px 20px 20px; /* Abgerundete Ecken */
+    padding: 20px;
+    
 
 }
 
