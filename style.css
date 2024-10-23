@@ -78,6 +78,7 @@ img {
 
 
 #navigation {
+    min-height: 50px; /* Mindesthöhe des Footers, die du anpassen kannst */
     position: fixed; /* Fixiert das Menü am unteren Rand */
     bottom: 0;
     left: 0;
