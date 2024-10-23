@@ -118,3 +118,15 @@ img {
     border-color: #0056b3; /* Farbänderung beim Fokussieren */
 }
 
+.registration {
+    display: flex;
+    align-content: center;
+    border: 2px solid #007bff;
+    font-size: 16px; /* Schriftgröße */
+    transition: border-color 0.3s; /* Sanfte Randfarbe beim Hover */
+    text-align: center;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
+}
+
