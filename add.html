@@ -17,7 +17,7 @@
       fetch('footer.html')  // Pfad zur footer.html
         .then(response => response.text())  // Inhalt als Text lesen
         .then(data => {
-          document.getElementById('footer').innerHTML = data;  // Footer in den Container einfügen
+          document.getElementById('navigation').innerHTML = data;  // Footer in den Container einfügen
         })
         .catch(error => console.error('Fehler beim Laden des Footers:', error));
     </script>
