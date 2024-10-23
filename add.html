@@ -10,18 +10,18 @@
         <h1>Erstelle eine Anzeige</h1>
         <p>Bitte folgende Informationen angeben:</p>
         </div>
-<footer>
-    <div id="navigation"></div> <!-- Container für den Footer -->
-
-    <script>
-      fetch('footer.html')  // Pfad zur footer.html
-        .then(response => response.text())  // Inhalt als Text lesen
-        .then(data => {
-          document.getElementById('navigation').innerHTML = data;  // Footer in den Container einfügen
-        })
-        .catch(error => console.error('Fehler beim Laden des Footers:', error));
-    </script>
-    
-    </footer>
+        <footer>
+            <div id="navigation"></div> <!-- Container für den Footer -->
+        
+            <script>
+              fetch('footer.html')  // Pfad zur footer.html
+                .then(response => response.text())  // Inhalt als Text lesen
+                .then(data => {
+                  document.getElementById('navigation').innerHTML = data;  // Footer in den Container einfügen
+                })
+                .catch(error => console.error('Fehler beim Laden des Footers:', error));
+            </script>
+            
+        </footer>
 </body>
     </html>
