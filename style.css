@@ -153,7 +153,6 @@ body {
     font-size: 10vh;
     border-radius: 50%;
     padding: 20px;
-    position: absolute;
     z-index: 1;
     animation-name: animation1;
     animation-duration: 1s;
@@ -229,3 +228,17 @@ body {
   .heading h1 {
     font-size: 28px;
   }
+
+
+  #like {
+    float: right;
+    margin-left: 40vw;
+    margin-top: 4vh;
+  }
+
+  #dislike {
+    float: left;
+    margin-top: 4vh;
+    margin-left: -4vw;
+  }
+
