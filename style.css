@@ -169,6 +169,68 @@ body {
     object-fit: cover;
     object-position: 50% 50%;
   }
+
+  #like,
+  #dislike,
+  #like2,
+  #dislike2 {
+    animation-name: animation1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    /* don't run animation at the beginning */
+    animation-play-state: paused;
+  }
+  
+  #like.trigger,
+  #dislike.trigger {
+    animation-name: animation2;
+  }
+
+  #ui_menubar {
+    font-size: 15vw;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
+  }
+
+  #ui_four_page {
+    font-size: 15vw;
+    justify-content: space-around;
+    position: fixed;
+    /*Needed to change!*/transition: opacity 0.2s ease; /* Übergang für das Ein- und Ausblenden */
+  }
+
+  #like2 {
+    position: fixed; /* Um das Element relativ zum Viewport zu positionieren */
+    top: 50%; /* Setzt das Element in die Mitte des Bildschirms */
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  #dislike2 {
+    position: fixed; /* Um das Element relativ zum Viewport zu positionieren */
+    top: 50%; /* Setzt das Element in die Mitte des Bildschirms */
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  #undo2 {
+    position: fixed; /* Fixiert das Element relativ zum Viewport */
+    top: 5px; /* Fügt Abstand von 50px vom oberen Rand hinzu */
+    left: 50%; /* Positioniert das Element in der Mitte des Viewports */
+    transform: translateX(-50%); /* Verschiebt das Element horizontal um die Hälfte seiner Breite, um es mittig zu zentrieren */
+  }
+
+  #message2 {
+    position: fixed; /* Fixiert das Element relativ zum Viewport */
+    bottom: 10px; /* Fügt Abstand von 50px vom oberen Rand hinzu */
+    left: 50%; /* Positioniert das Element in der Mitte des Viewports */
+    transform: translateX(-50%); /* Verschiebt das Element horizontal um die Hälfte seiner Breite, um es mittig zu zentrieren */
+  }
+  
   /*anpassung der icons*/
   #like,
   #dislike,
