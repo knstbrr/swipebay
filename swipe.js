@@ -38,12 +38,10 @@ function appendNewCard() {
     onLike: () => {
       like.style.animationPlayState = 'running';
       like.classList.toggle('trigger');
-      uioff();
     },
     onDislike: () => {
       dislike.style.animationPlayState = 'running';
       dislike.classList.toggle('trigger');
-      uioff();
     }
   });
   swiper.append(card.element);
