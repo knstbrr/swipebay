@@ -57,3 +57,13 @@ function appendNewCard() {
 for (let i = 0; i < 5; i++) {
   appendNewCard();
 }
+function löschen(){
+  document.cookie.split(";").forEach(function(cookie) { 
+    document.cookie = cookie.split("=")[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;"; 
+});
+console.log("Alle Cookies wurden gelöscht");
+}
+function keks(){
+  let card = document.cookie;
+  alert("Cockies: " + card);
+}
