@@ -72,10 +72,6 @@ class Card {
     this.#offsetY = y - this.#startPoint.y;
     const rotate = this.#offsetX * 0.1;
     this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
-    // dismiss card
-    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.7) {
-      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
-    }
   }
 
   // mouse event handlers
@@ -87,9 +83,15 @@ class Card {
   }
 
   #handleMoveUp = () => {
-    this.#startPoint = null;
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
+      // Trigger swipe after release and only if the threshold is passed
+      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
+    } else {
+      // Reset the card position if not swiped
+      this.element.style.transform = '';
+      this.#startPoint = null;
+    }
     document.removeEventListener('mousemove', this.#handleMouseMove);
-    this.element.style.transform = '';
   }
 
   // touch event handlers
@@ -102,9 +104,15 @@ class Card {
   }
 
   #handleTouchEnd = () => {
-    this.#startPoint = null;
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
+      // Trigger swipe after release and only if the threshold is passed
+      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
+    } else {
+      // Reset the card position if not swiped
+      this.element.style.transform = '';
+      this.#startPoint = null;
+    }
     document.removeEventListener('touchmove', this.#handleTouchMove);
-    this.element.style.transform = '';
   }
 
   #dismiss = (direction) => {
@@ -113,12 +121,12 @@ class Card {
     document.removeEventListener('mousemove', this.#handleMouseMove);
     document.removeEventListener('touchend', this.#handleTouchEnd);
     document.removeEventListener('touchmove', this.#handleTouchMove);
-    this.element.style.transition = 'transform 1s';
-    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${90 * direction}deg)`;
+    this.element.style.transition = 'transform 0.35s';
+    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${75 * direction}deg)`;
     this.element.classList.add('dismissing');
     setTimeout(() => {
       this.element.remove();
-    }, 500);
+    }, 350);
     if (typeof this.onDismiss === 'function') {
       this.onDismiss();
     }

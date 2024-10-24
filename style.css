@@ -22,12 +22,8 @@ body {
     width: 100vw;
     overflow: hidden;
     background-color: #383838;
+    position: fixed;
 }
-.cookie-button {
-    display: flex;
-    justify-content: center;
-}
-
 
 #navigation {
     height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
@@ -117,35 +113,45 @@ body {
     padding: 5px;
 }
 
-.registration button {
-    background-color: white;
-    border: 2px solid #ffffff;
+#registrieren {
+  margin-top: 3vh;
 }
 
+.inline {
+  display: inline-block
+}
 
+.inline a {
+  margin-top: 1vh;
+  color: violet;
+
+}
 
 #swiper {
     height: 65vh;
     aspect-ratio: 2 / 3;
-    perspective: 1000px;
-    perspective-origin: center 110%;
+    perspective: 100px;
+    perspective-origin: center 100%;
     transform-style: preserve-3d;
     position: relative;
+    display: flex;
   }
   
   .card {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     border-radius: 20px;
     overflow: hidden;
-    transform: translateZ(calc(-30px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i)));
+    transform: translateZ(calc(-3px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i)));
     filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
     cursor: pointer;
     user-select: none;
     transition: transform 0.5s;
-    margin-left: 9vw;
-    margin-top: 10vw;
+    top: 7vh;
+    right: 3vw;
+    bottom:7vh;
+    left: 3vw;
   }
   
   .card img {
@@ -157,7 +163,7 @@ body {
   
   #like,
   #dislike {
-    font-size: 10vh;
+    font-size: 8vh;
     border-radius: 50%;
     padding: 20px;
     z-index: 1;
@@ -241,15 +247,15 @@ body {
 
 
   #like {
-    float: right;
-    margin-left: 40vw;
-    margin-top: 4vh;
+    position: fixed;
+    bottom: 0;
+    right: -5vw;
   }
 
   #dislike {
-    float: left;
-    margin-top: 4vh;
-    margin-left: -4vw;
+    position: fixed;
+   bottom: 0;
+   left: -5vw;
   }
 
   .mystyle {
