@@ -139,8 +139,9 @@ body {
     perspective: 100px;
     perspective-origin: center 100%;
     transform-style: preserve-3d;
-    position: relative;
+    position: fixed;
     display: flex;
+    justify-content: space-around;
   }
   
   .card {
@@ -158,6 +159,8 @@ body {
     right: 3vw;
     bottom:7vh;
     left: 3vw;
+    display: flex;
+    justify-content: space-around;
   }
   
   .card img {
@@ -171,17 +174,12 @@ body {
   #dislike,
   #undo,
   #message {
-    font-size: 8vh;
-    border-radius: 50%;
-    padding: 20px;
-    z-index: 1;
     animation-name: animation1;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     /* don't run animation at the beginning */
     animation-play-state: paused;
-    transform: translateY(-50%); /* Vertikales Zentrieren */
   }
   
   #like.trigger,
@@ -189,39 +187,36 @@ body {
     animation-name: animation2;
   }
   
+  .ui {
+    font-size: 15vw;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
+  }
+
   #like {
     color: greenyellow;
-    position: fixed;
-    bottom: 0;
-    right: -5vw;
   }
   
   #dislike {
     color: red;
-    position: fixed;
-    bottom: 0;
-    left: -5vw;
   }
   
   #undo {
     color: black;
-    position: fixed;
-    bottom: 0;
-    left: 10vw;
   }
 
 #message {
   color: lightblue;
-  position: fixed;
-  bottom: 0;
-  right: 10vw;
 }
 
   @keyframes animation1 {
   
     0%,
     100% {
-      opacity: 0.5;
+      opacity: 0.75;
     }
   
     50% {
@@ -233,7 +228,7 @@ body {
   
     0%,
     100% {
-      opacity: 0.5;
+      opacity: 0.75;
     }
   
     50% {
