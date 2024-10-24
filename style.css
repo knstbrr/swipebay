@@ -31,7 +31,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: 383838; /* Hintergrundfarbe */
+    background-color: #383838; /* Hintergrundfarbe */
     display: flex; /* Flexbox für die Anordnung */
     justify-content: space-around; /* Gleiche Abstände zwischen den Links */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
@@ -168,7 +168,9 @@ body {
   }
   
   #like,
-  #dislike {
+  #dislike,
+  #undo,
+  #message {
     font-size: 8vh;
     border-radius: 50%;
     padding: 20px;
@@ -189,12 +191,32 @@ body {
   
   #like {
     color: greenyellow;
+    position: fixed;
+    bottom: 0;
+    right: -5vw;
   }
   
   #dislike {
     color: red;
+    position: fixed;
+    bottom: 0;
+    left: -5vw;
   }
   
+  #undo {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 10vw;
+  }
+
+#message {
+  color: lightblue;
+  position: fixed;
+  bottom: 0;
+  right: 10vw;
+}
+
   @keyframes animation1 {
   
     0%,
@@ -249,26 +271,4 @@ body {
 
   .heading h1 {
     font-size: 28px;
-  }
-
-
-  #like {
-    position: fixed;
-    bottom: 0;
-    right: -5vw;
-  }
-
-  #dislike {
-    position: fixed;
-   bottom: 0;
-   left: -5vw;
-  }
-
-  .mystyle {
-    width: 100%;
-    padding: 25px;
-    background-color: coral;
-    color: white;
-    font-size: 25px;
-    visibility: hidden;
   }
