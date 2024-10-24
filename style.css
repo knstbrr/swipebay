@@ -31,7 +31,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: 383838; /* Hintergrundfarbe */
+    background-color: #383838; /* Hintergrundfarbe */
     display: flex; /* Flexbox für die Anordnung */
     justify-content: space-around; /* Gleiche Abstände zwischen den Links */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
