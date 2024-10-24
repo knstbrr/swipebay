@@ -84,10 +84,7 @@ function iconhide(){
   iconl();
   icond();
 }
-function navigatoroff(){
-  var element = document.getElementById("navigation")
-  element.classList.add("mystyle")
-}
+
 function navigationon(){
   var element = document.getElementById("navigation")
   element.classList.remove("mystyle")
