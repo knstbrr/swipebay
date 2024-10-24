@@ -118,7 +118,15 @@ body {
     border: 2px solid #ffffff;
 }
 
+.inline {
+  display: inline-block
+}
 
+.inline a {
+  margin-top: 1vh;
+  color: violet;
+
+}
 
 #swiper {
     height: 65vh;
