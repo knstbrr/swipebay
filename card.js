@@ -1,3 +1,5 @@
+let ui_mode = 0
+
 class Card {
   constructor({
     imageUrl,
@@ -45,6 +47,9 @@ class Card {
       this.#startPoint = { x: clientX, y: clientY }
       document.addEventListener('touchmove', this.#handleTouchMove);
       this.element.style.transition = 'transform 0s';
+      if (ui_mode == 1) {
+        ui_1();
+      }
     });
 
     document.addEventListener('touchend', this.#handleTouchEnd);
@@ -104,6 +109,9 @@ class Card {
   }
 
   #handleTouchEnd = () => {
+    if (ui_mode == 1) {
+      ui_0();
+    }
     if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
       // Trigger swipe after release and only if the threshold is passed
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
