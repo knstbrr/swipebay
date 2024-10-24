@@ -3,30 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message</title>
+    <title>Nachrichten</title>
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #383838;
-        }
-        .header {
-            background-color: #383838;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .search-bar {
-            padding: 10px;
-            background-color: #383838;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-        }
         .chat-list {
             list-style: none;
             padding: 0;
@@ -72,78 +52,18 @@
             background-color: #868686;
             color:#fff ;
         }
-        #navigation {
-    height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
-    position: fixed; /* Fixiert das Menü am unteren Rand */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #383838; /* Hintergrundfarbe */
-    display: flex; /* Flexbox für die Anordnung */
-    justify-content: space-around; /* Gleiche Abstände zwischen den Links */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
-    z-index: 1000; /* Damit das Menü über anderen Elementen bleibt */
-}
-
-#navigation a {
-    text-decoration: none; /* Entfernt Unterstreichung */
-    flex: 1; /* Macht jedes Link gleich breit */
-    display: flex; /* Flexbox für die Bildzentrierung */
-    justify-content: center; /* Zentriert die Bilder innerhalb der Links */
-    align-items: center; /* Vertikale Zentrierung der Bilder */
-}
-
-#navigation img {
-    width: 35px; /* Breite der Icons */
-    height: 35px; /* Höhe der Icons */
-    transition: transform 0.2s; /* Sanfte nimation beim Hover */
-}
-
-#navigation img:hover {
-    transform: scale(1.1); /* Vergrößerung beim Hover */
-}
-h1 {
-        color: #fff;
-    }
+        
     h2 {
         color: #fff;
     }
     p {
         color: #fff;
     }
-    .search-container {
-    display: flex; /* Flexbox für Anordnung */
-    text-align: center;
-    margin: 20px; /* Abstand um die Suchleiste */
-    text-align: center;
-    align-items: center;
-
-}
-
-.search-input {
-    width: 50vw; /* Breite der Suchleiste */
-    padding: 10px; /* Innenabstand */
-    border: 2px solid white; /* Randfarbe */
-    border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
-    outline: none; /* Entfernt den Standard-Rahmen */
-    font-size: 16px; /* Schriftgröße */
-    transition: border-color 0.3s; /* Sanfte Randfarbe beim Hover */
-    text-align: center;
-    color: white;
-    background-color: #383838;
-    align-items: center;
-
-}
-
-.search-input:focus {
-    border-color: #0056b3; /* Farbänderung beim Fokussieren */
-}
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>Message</h1>
+<div class="heading">
+        <h1>Nachrichten</h1>
     </div>
 
     <form action="https://www.youtube.com/results?search_query=" method="get" target="_blank">
@@ -186,12 +106,7 @@ h1 {
                 <span class="chat-time">13:15</span>
                 <div class="chat-message">Hey du!</div>
             </div>
-            <div class="chat-content">
-                <video width="300" controls autoplay>
-                    <source src="https://bit.ly/3BlS71b" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  
+            <div class="chat-content">                  
             </div>
         </li>
     </ul>
