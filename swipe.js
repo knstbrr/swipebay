@@ -38,10 +38,12 @@ function appendNewCard() {
     onLike: () => {
       like.style.animationPlayState = 'running';
       like.classList.toggle('trigger');
+      document.cookie ="" + cardCount;
     },
     onDislike: () => {
       dislike.style.animationPlayState = 'running';
       dislike.classList.toggle('trigger');
+      document.cookie = cardCount;
     }
   });
   swiper.append(card.element);
@@ -65,5 +67,14 @@ console.log("Alle Cookies wurden gelöscht");
 }
 function keks(){
   let card = document.cookie;
-  alert("Cockies: " + card);
+  alert("Cockies:" + card);
+}
+function counting(){
+  let card = document.cookie;
+  if (card > 100){
+    alert("Du hast so viel zeit verschwenden das du 100 mall gesweipt hast")
+  }else{
+    alert("Nicht schummeln")
+  }
+
 }
