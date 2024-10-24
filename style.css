@@ -111,6 +111,12 @@ body {
     background-color: #383838;
     color: white;
     padding: 5px;
+    transition: border-color 0.3s;
+}
+
+ input:focus {
+  border-color:  #0056b3; /* Farbänderung beim Fokussieren */
+  outline: none;
 }
 
 #registrieren {
