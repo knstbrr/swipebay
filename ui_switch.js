@@ -1,6 +1,6 @@
 var time = 0; // Thats the delay for switch the uis
 
-function dislike_0() {
+  function dislike_0() {
     var element = document.getElementById("dislike");
     element.classList.add("mystyle");
   }

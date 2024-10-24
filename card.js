@@ -1,4 +1,11 @@
-let ui_mode = 1
+let ui_mode = 0
+
+/* Muss beim Button switch geändert werden
+function icon_hide_other(){
+  var element = document.getElementById("like");
+  element.classList.remove("mystyle");
+}
+*/
 
 class Card {
   constructor({
