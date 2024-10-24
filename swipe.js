@@ -88,14 +88,12 @@ function appendNewCard() {
     onLike: () => {
       like.style.animationPlayState = 'running';
       like.classList.toggle('trigger');
-      icond();
-      iconl();
+      uioff();
     },
     onDislike: () => {
       dislike.style.animationPlayState = 'running';
       dislike.classList.toggle('trigger');
-      icond();
-      iconl();
+      uioff();
     }
   });
   swiper.append(card.element);
@@ -155,10 +153,10 @@ function searchon(){
 function uioff(){
   searchoff();
   navigatoroff();
-  iconhide();
+  iconshow();
 }
 function uion(){
   searchon();
   navigationon();
-  iconshow();
+  iconhide();
 }
