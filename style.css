@@ -87,20 +87,17 @@ body {
 }
 
 
-.registration {
+.registration, .anzeigenerstellung {
     display: flex;
     font-size: 16px; /* Schriftgröße */
     transition: border-color 0.3s; /* Sanfte Randfarbe beim Hover */
     text-align: center;
     width: 50vw;
-    padding: 10px;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
-    margin-top: 8vh;
-    margin-left: 15vw;
     color: white;
 }
 
-.registration form {
+.registration form, .anzeigenerstellung form {
     border: 2px solid #ffffff;
     border-radius: 20px 20px 20px 20px; /* Abgerundete Ecken */
     display: flex;
@@ -110,7 +107,7 @@ body {
     color: white;
 }
 
-.registration input {
+.registration input, .anzeigenerstellung input, .anzeigenerstellung textarea {
     border: 2px solid white;
     font-size: 16px;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
