@@ -59,20 +59,3 @@ function appendNewCard() {
 for (let i = 0; i < 5; i++) {
   appendNewCard();
 }
-
-function icond() {
-  var element = document.getElementById("dislike");
-  element.classList.add("mystyle");
-} 
-function iconl() {
-  var element = document.getElementById("like");
-  element.classList.add("mystyle");
-} 
-function diconl() {
-  var element = document.getElementById("like");
-  element.classList.remove("mystyle");
-} 
-function dicond() {
-  var element = document.getElementById("dislike");
-  element.classList.remove("mystyle");
-} 
