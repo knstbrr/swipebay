@@ -139,8 +139,9 @@ body {
     perspective: 100px;
     perspective-origin: center 100%;
     transform-style: preserve-3d;
-    position: relative;
+    position: fixed;
     display: flex;
+    justify-content: space-around;
   }
   
   .card {
@@ -158,6 +159,8 @@ body {
     right: 3vw;
     bottom:7vh;
     left: 3vw;
+    display: flex;
+    justify-content: space-around;
   }
   
   .card img {
@@ -189,7 +192,7 @@ body {
     display: flex;
     justify-content: space-around;
     position: fixed;
-    bottom: 100px;
+    bottom: 75px;
     width: 100%;
   }
 
