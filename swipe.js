@@ -28,12 +28,11 @@ const urls = [
 
 // variables
 let cardCount = 0;
-let timer_sic = 0;
 
 // functions
 function appendNewCard() {
   const card = new Card({
-    imageUrl: urls[cardCount % 18],
+    imageUrl: urls[cardCount % 19],
     onDismiss: appendNewCard,
     onLike: () => {
       like.style.animationPlayState = 'running';
@@ -45,7 +44,7 @@ function appendNewCard() {
     }
   });
   swiper.append(card.element);
-  cardCount++;
+  cardCount ++;
 
   const cards = swiper.querySelectorAll('.card:not(.dismissing)');
   cards.forEach((card, index) => {
@@ -53,7 +52,21 @@ function appendNewCard() {
   });
 }
 
+function correct_ui_bar() {
+  // Uncommend this if you want to use mode 1, because the icons are rendered separately
+  /*
+  var bar = document.getElementById("ui_menubar");
+  bar.style.pointerEvents = 'none';
+  bar.style.opacity = 0;
+  */
+
+  var icons = document.getElementById("ui_four_page");
+  icons.style.pointerEvents = 'none';
+  icons.style.opacity = 0;  // Setzt die Sichtbarkeit auf unsichtbar
+}
+
 // first 5 cards
 for (let i = 0; i < 5; i++) {
   appendNewCard();
+  correct_ui_bar();
 }
