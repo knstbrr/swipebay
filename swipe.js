@@ -76,34 +76,3 @@ function dicond() {
   var element = document.getElementById("dislike");
   element.classList.remove("mystyle");
 } 
-function iconshow(){
-  diconl();
-  dicond();
-}
-function iconhide(){
-  iconl();
-  icond();
-}
-
-function navigationon(){
-  var element = document.getElementById("navigation")
-  element.classList.remove("mystyle")
-}
-function searchoff(){
-  var element = document.getElementById("suche")
-  element.classList.add("mystyle")
-}
-function searchon(){
-  var element = document.getElementById("suche")
-  element.classList.remove("mystyle")
-}
-function uioff(){
-  searchoff();
-  navigatoroff();
-  iconshow();
-}
-function uion(){
-  searchon();
-  navigationon();
-  iconhide();
-}
