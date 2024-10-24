@@ -113,9 +113,8 @@ body {
     padding: 5px;
 }
 
-.registration button {
-    background-color: white;
-    border: 2px solid #ffffff;
+#registrieren {
+  margin-top: 3vh;
 }
 
 .inline {
