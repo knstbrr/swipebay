@@ -9,7 +9,7 @@ head {
 
 }
 
-input {
+input, textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
