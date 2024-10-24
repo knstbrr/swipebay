@@ -1,4 +1,5 @@
-* {
+ /*alles*/
+      *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;}
@@ -16,7 +17,7 @@ input, textarea {
     margin-bottom: 20px;
     
 }
-
+/*die ganze seite*/
 body {
     height: 100vh;
     width: 100vw;
@@ -24,7 +25,7 @@ body {
     background-color: #383838;
     position: fixed;
 }
-
+/*navigationsleiste unten*/
 #navigation {
     height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
     position: fixed; /* Fixiert das Menü am unteren Rand */
@@ -38,7 +39,7 @@ body {
     z-index: 1000; /* Damit das Menü über anderen Elementen bleibt */
     transition: opacity 0.2s ease; /* Übergang für das Ein- und Ausblenden */
 }
-
+/*anpassung der Links in der navigationsleiste*/
 #navigation a {
     text-decoration: none; /* Entfernt Unterstreichung */
     flex: 1; /* Macht jedes Link gleich breit */
@@ -46,24 +47,24 @@ body {
     justify-content: center; /* Zentriert die Bilder innerhalb der Links */
     align-items: center; /* Vertikale Zentrierung der Bilder */
 }
-
+/*anpassung der icons in der navigationsleiste*/
 #navigation img {
     width: 35px; /* Breite der Icons */
     height: 35px; /* Höhe der Icons */
     transition: transform 0.2s; /* Sanfte Animation beim Hover */
 }
-
+/*vergrößerung beim hover über den icons der navigationsleiste*/
 #navigation img:hover {
     transform: scale(1.1); /* Vergrößerung beim Hover */
 }
-
+/*anpassung des containers der suchleiste*/
 .search-container {
     display: flex; /* Flexbox für Anordnung */
     text-align: center;
     margin: 20px; /* Abstand um die Suchleiste */
     text-align: center;
 }
-
+/*anpassung der suchleiste*/
 .search-input {
     width: 50vw; /* Breite der Suchleiste */
     padding: 10px; /* Innenabstand */
@@ -77,16 +78,12 @@ body {
     background-color: #383838;
     margin-top: 2vh;
 }
-
+/*anpassung der suchleiste im angeklickten modus*/
 .search-input:focus {
     border-color: #0056b3; /* Farbänderung beim Fokussieren */
 }
 
-#suche {
-  transition: opacity 0.2s ease; /* Übergang für das Ein- und Ausblenden */
-}
-
-
+/*anpassung der container für registrierung und anzeigenerstellung*/
 .registration, .anzeigenerstellung {
     display: flex;
     font-size: 16px; /* Schriftgröße */
@@ -96,7 +93,7 @@ body {
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
     color: white;
 }
-
+/*anpassung der form elemente der registrierung und anzeigenerstellung*/
 .registration form, .anzeigenerstellung form {
     border: 2px solid #ffffff;
     border-radius: 20px 20px 20px 20px; /* Abgerundete Ecken */
@@ -106,7 +103,7 @@ body {
     padding: 20px;
     color: white;
 }
-
+/*anpassen der input elemente und textareas der anzeigenerstellung und registrierung*/
 .registration input, .anzeigenerstellung input, .anzeigenerstellung textarea {
     border: 2px solid white;
     font-size: 16px;
@@ -116,26 +113,26 @@ body {
     padding: 5px;
     transition: border-color 0.3s;
 }
-
+/*anpassung des designs der input elemente bei anklicken*/
  input:focus {
   border-color:  #0056b3; /* Farbänderung beim Fokussieren */
   outline: none;
 }
-
+/*margin für button auf registrieren seite*/
 #registrieren {
   margin-top: 3vh;
 }
-
+/*damit text der agb und checkbox in einer zeile sind*/
 .inline {
   display: inline-block
 }
-
+/*damit link der agb besser aussieht*/
 .inline a {
   margin-top: 1vh;
   color: violet;
 
 }
-
+/*anpassung des swipe containers*/
 #swiper {
     height: 65vh;
     aspect-ratio: 2 / 3;
@@ -146,7 +143,7 @@ body {
     display: flex;
     justify-content: space-around;
   }
-  
+  /*anpassung der karten*/
   .card {
     width: 100%;
     height: 100%;
@@ -165,14 +162,14 @@ body {
     display: flex;
     justify-content: space-around;
   }
-  
+  /*anpassung der bilder der karten*/
   .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
   }
-  
+  /*anpassung der icons*/
   #like,
   #dislike,
   #undo,
@@ -184,12 +181,12 @@ body {
     /* don't run animation at the beginning */
     animation-play-state: paused;
   }
-  
+  /*animationen den angetippten icons zugewiesen*/
   #like.trigger,
   #dislike.trigger {
     animation-name: animation2;
   }
-  
+  /*anpassung für den container, in dem sich alle vier icons befinden*/
   .ui {
     font-size: 15vw;
     display: flex;
@@ -198,23 +195,23 @@ body {
     bottom: 75px;
     width: 100%;
   }
-
+/*für das herz/like icon*/
   #like {
     color: greenyellow;
   }
-  
+  /*für das kreuz/dislike icon*/
   #dislike {
     color: red;
   }
-  
+  /*für das rückgängig icon*/
   #undo {
     color: black;
   }
-
+/*für das nachrichten icon*/
 #message {
   color: lightblue;
 }
-
+/*animation für das like und dislike icon*/
   @keyframes animation1 {
   
     0%,
@@ -226,7 +223,7 @@ body {
       opacity: 1;
     }
   }
-  
+  /*animation für das like und dislike icon*/
   @keyframes animation2 {
   
     0%,
@@ -238,26 +235,26 @@ body {
       opacity: 1;
     }
   }
-
+/*für die großen symbole/icons auf den leeren seiten*/
   .symbol{
     display: flex;
     justify-content: center;
     margin-top: 30vh;
   }
-
+/*für die bilder der großen icons auf den leeren seiteb*/
   .symbol img {
     height: auto;
     width: 40vw;
     opacity: 0.5;
     margin-bottom: 30px;
   }
-
+/*für die beschreibung unter den großen icons auf den leeren seiten*/
   .description {
     text-align: center;
     opacity: 0.5;
     color: white;
   }
-
+/*für die überschriften auf den seiten*/
   .heading {
     margin-left: 5px;
     display: flex;
@@ -266,7 +263,7 @@ body {
     text-align: center;
     color: white;
   }
-
+/*für den text der überschriften auf den seiten*/
   .heading h1 {
     font-size: 28px;
   }
