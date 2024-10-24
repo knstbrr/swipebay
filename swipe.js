@@ -78,6 +78,7 @@ const urls = [
 
 // variables
 let cardCount = 0;
+let timer_sic = 0;
 
 // functions
 function appendNewCard() {
@@ -87,10 +88,14 @@ function appendNewCard() {
     onLike: () => {
       like.style.animationPlayState = 'running';
       like.classList.toggle('trigger');
+      icond();
+      iconl();
     },
     onDislike: () => {
       dislike.style.animationPlayState = 'running';
       dislike.classList.toggle('trigger');
+      icond();
+      iconl();
     }
   });
   swiper.append(card.element);
@@ -105,4 +110,55 @@ function appendNewCard() {
 // first 5 cards
 for (let i = 0; i < 5; i++) {
   appendNewCard();
+}
+
+function icond() {
+  var element = document.getElementById("dislike");
+  element.classList.add("mystyle");
+} 
+function iconl() {
+  var element = document.getElementById("like");
+  element.classList.add("mystyle");
+} 
+function diconl() {
+  var element = document.getElementById("like");
+  element.classList.remove("mystyle");
+} 
+function dicond() {
+  var element = document.getElementById("dislike");
+  element.classList.remove("mystyle");
+} 
+function iconshow(){
+  diconl();
+  dicond();
+}
+function iconhide(){
+  iconl();
+  icond();
+}
+function navigatoroff(){
+  var element = document.getElementById("navigation")
+  element.classList.add("mystyle")
+}
+function navigationon(){
+  var element = document.getElementById("navigation")
+  element.classList.remove("mystyle")
+}
+function searchoff(){
+  var element = document.getElementById("suche")
+  element.classList.add("mystyle")
+}
+function searchon(){
+  var element = document.getElementById("suche")
+  element.classList.remove("mystyle")
+}
+function uioff(){
+  searchoff();
+  navigatoroff();
+  iconhide();
+}
+function uion(){
+  searchon();
+  navigationon();
+  iconshow();
 }
