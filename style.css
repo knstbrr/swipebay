@@ -31,7 +31,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: 383838; /* Hintergrundfarbe */
+    background-color: #383838; /* Hintergrundfarbe */
     display: flex; /* Flexbox für die Anordnung */
     justify-content: space-around; /* Gleiche Abstände zwischen den Links */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
@@ -145,8 +145,9 @@ body {
     perspective: 100px;
     perspective-origin: center 100%;
     transform-style: preserve-3d;
-    position: relative;
+    position: fixed;
     display: flex;
+    justify-content: space-around;
   }
   
   .card {
@@ -164,6 +165,8 @@ body {
     right: 3vw;
     bottom:7vh;
     left: 3vw;
+    display: flex;
+    justify-content: space-around;
   }
   
   .card img {
@@ -174,18 +177,15 @@ body {
   }
   
   #like,
-  #dislike {
-    font-size: 8vh;
-    border-radius: 50%;
-    padding: 20px;
-    z-index: 1;
+  #dislike,
+  #undo,
+  #message {
     animation-name: animation1;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     /* don't run animation at the beginning */
     animation-play-state: paused;
-    transform: translateY(-50%); /* Vertikales Zentrieren */
   }
   
   #like.trigger,
@@ -193,6 +193,15 @@ body {
     animation-name: animation2;
   }
   
+  .ui {
+    font-size: 15vw;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
+  }
+
   #like {
     color: greenyellow;
   }
@@ -201,11 +210,19 @@ body {
     color: red;
   }
   
+  #undo {
+    color: black;
+  }
+
+#message {
+  color: lightblue;
+}
+
   @keyframes animation1 {
   
     0%,
     100% {
-      opacity: 0.5;
+      opacity: 0.75;
     }
   
     50% {
@@ -217,7 +234,7 @@ body {
   
     0%,
     100% {
-      opacity: 0.5;
+      opacity: 0.75;
     }
   
     50% {
@@ -255,26 +272,4 @@ body {
 
   .heading h1 {
     font-size: 28px;
-  }
-
-
-  #like {
-    position: fixed;
-    bottom: 0;
-    right: -5vw;
-  }
-
-  #dislike {
-    position: fixed;
-   bottom: 0;
-   left: -5vw;
-  }
-
-  .mystyle {
-    width: 100%;
-    padding: 25px;
-    background-color: coral;
-    color: white;
-    font-size: 25px;
-    visibility: hidden;
   }

@@ -4,9 +4,10 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
         <title>Swipebay</title>
-        <div id="suche" class="search-container">
-            <input id="suchleiste" type="text" placeholder="Suchbegriff eingeben..." class="search-input">
-        </div>
+        <form action="https://www.youtube.com/results?search_query=" method="get" target="_blank">
+            <input class="search-input" type="text" name="q" placeholder="Suchbegriff eingeben" required>
+        </form>
+        
     </head>
 
 <body>
@@ -16,6 +17,8 @@
      
     <div class="ui">
         <ion-icon id="dislike" name="close-outline"></ion-icon>
+        <ion-icon id="undo" name="arrow-undo-outline"></ion-icon>
+        <ion-icon id="message" name="chatbubbles-outline"></ion-icon>
         <ion-icon id="like" name="heart"></ion-icon>
     </div>
     

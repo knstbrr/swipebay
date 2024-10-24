@@ -25,6 +25,7 @@ class Card {
       (navigator.msMaxTouchPoints > 0));
   }
 
+  // class erstellen und objekte//
   #init = () => {
     const card = document.createElement('div');
     card.classList.add('card');
