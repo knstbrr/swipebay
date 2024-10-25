@@ -1,4 +1,4 @@
-let ui_mode = 1;
+let ui_mode = 0;
 
 class Card {
   constructor({
@@ -173,7 +173,7 @@ class Card {
     // Nach Abschluss der Animation den Link aufrufen
     setTimeout(() => {
       this.element.remove();
-      window.location.href = "messages.html";
+      window.location.href = "wha.html";
     }, 500); // Die Dauer (500 ms) muss der Dauer der CSS-Animation entsprechen
   }
 }
