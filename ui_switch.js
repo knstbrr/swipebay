@@ -43,7 +43,7 @@ var time = 0; // Thats the delay for switch the uis
     var element = document.getElementById("suche");
     setTimeout(function() {
       element.style.opacity = 1; // Übergang zur vollen Sichtbarkeit
-    }, 10); // Kurzer Delay, um sicherzustellen, dass die Änderung von display aktiv wird
+    }, 10); // Kurzer Delay, um sicherzustellen dass die Änderung von display aktiv wird
   }
 
   // die Icons und das hide_other_menu werden von swipe.js ausgeblendet, da es beim start von index.html ein Trigger gibt! Es verhindert das Rendern der Icons
