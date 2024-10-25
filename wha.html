@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Chat Clone</title>
+    <title>Nachricht an Helga</title>
+    <link rel="icon" type="image/x-icon" href="ui/logo2.png">
     <style>
          .heading h1 {
     font-size: 28px;
@@ -26,7 +27,7 @@
         .chat-container {
             width: 400px;
             height: 600px;
-            background-color: white;
+            background-color: #383838;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             display: flex;
@@ -70,7 +71,7 @@
             flex-grow: 1;
             padding: 15px;
             overflow-y: auto;
-            background-color: #e5ddd5;
+            background-color: #383838;
         }
 
         .message {
@@ -107,22 +108,24 @@
             padding: 10px;
             display: flex;
             align-items: center;
-            background-color: #f0f0f0;
+            background-color: #383838;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
         }
 
         .chat-footer input {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 20px;
-            margin-right: 10px;
+            border: 2px solid white;
+        font-size: 16px;
+        border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
+        background-color: #383838;
+        color: white;
+        padding: 5px;
+        transition: border-color 0.3s;
         }
 
         .chat-footer button {
-            background-color: #075e54;
-            border: none;
+            background-color: #383838;
+            border: 2px solid white;
             color: white;
             padding: 10px 15px;
             border-radius: 50%;
@@ -195,10 +198,9 @@
     <div id="navigation">
         <a href="user.html"><img src="ui/user.png"></a>
         <a href="add.html"><img src="ui/add.png"></a>
-        <a href="index.html"><img src="ui/swipe2.png"></a>
-        <a href="messages.html"><img src="ui/messages.png"></a>
+        <a href="index.html"><img src="ui/swipe.png"></a>
+        <a href="messages.html"><img src="ui/messages2.png"></a>
         <a href="heart.html"><img src="ui/heart.png"></a>
-    </div>
-</footer>
+    </footer>
 
 </html>
