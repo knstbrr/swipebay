@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Website</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem('betaAlertShown')) {
+                alert("Willkommen zur Beta-Version unserer Website! Es können bugs noch sein viel spaß:)");
+                localStorage.setItem('betaAlertShown', 'true');
+            }
+        });
+    </script>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
         <title>Swipebay</title>
