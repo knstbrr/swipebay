@@ -4,7 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Chat Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+         .heading h1 {
+    font-size: 28px;
+  }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #383838;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #595959;
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .chat-header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header .user-info .name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chat-header .user-info .status {
+            font-size: 12px;
+            color: #c7c7c7;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #e5ddd5;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .message.sent {
+            justify-content: flex-end;
+        }
+
+        .message.received {
+            justify-content: flex-start;
+        }
+
+        .message .text {
+            max-width: 60%;
+            padding: 10px 15px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .message.sent .text {
+            background-color: #dcf8c6;
+            border-bottom-right-radius: 0;
+        }
+
+        .message.received .text {
+            background-color: white;
+            border-bottom-left-radius: 0;
+        }
+
+        .chat-footer {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .chat-footer input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .chat-footer button {
+            background-color: #075e54;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #navigation {
+    height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
+    position: fixed; /* Fixiert das Menü am unteren Rand */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #383838; /* Hintergrundfarbe */
+    display: flex; /* Flexbox für die Anordnung */
+    justify-content: space-around; /* Gleiche Abstände zwischen den Links */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Effekt */
+    z-index: 1000; /* Damit das Menü über anderen Elementen bleibt */
+    transition: opacity 0.2s ease; /* Übergang für das Ein- und Ausblenden */
+}
+/*anpassung der Links in der navigationsleiste*/
+#navigation a {
+    text-decoration: none; /* Entfernt Unterstreichung */
+    flex: 1; /* Macht jedes Link gleich breit */
+    display: flex; /* Flexbox für die Bildzentrierung */
+    justify-content: center; /* Zentriert die Bilder innerhalb der Links */
+    align-items: center; /* Vertikale Zentrierung der Bilder */
+}
+/*anpassung der icons in der navigationsleiste*/
+#navigation img {
+    width: 35px; /* Breite der Icons */
+    height: 35px; /* Höhe der Icons */
+    transition: transform 0.2s; /* Sanfte Animation beim Hover */
+}
+/*vergrößerung beim hover über den icons der navigationsleiste*/
+#navigation img:hover {
+    transform: scale(1.1); /* Vergrößerung beim Hover */
+}
+/*anpassung des containers der suchleiste*/
+.search-container {
+    display: flex; /* Flexbox für Anordnung */
+    text-align: center;
+    margin: 20px; /* Abstand um die Suchleiste */
+    text-align: center;
+}
+    </style>
 <body>
     <div class="chat-container">
         <!-- Chat Header -->
