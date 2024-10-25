@@ -92,15 +92,19 @@ body {
     width: 50vw;
     border-radius: 10px 10px 10px 10px; /* Abgerundete Ecken */
     color: white;
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
 }
 /*anpassung der form elemente der registrierung und anzeigenerstellung*/
 .registration form, .anzeigenerstellung form {
     border: 2px solid #ffffff;
     border-radius: 20px 20px 20px 20px; /* Abgerundete Ecken */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     padding: 20px;
+    margin: auto;
     color: white;
 }
 /*anpassen der input elemente und textareas der anzeigenerstellung und registrierung*/
@@ -112,6 +116,10 @@ body {
     color: white;
     padding: 5px;
     transition: border-color 0.3s;
+}
+
+input[type="file"] {
+  width: 50vw;
 }
 /*anpassung des designs der input elemente bei anklicken*/
  input:focus {
@@ -258,19 +266,23 @@ body {
     width: 100%;
   }
 /*für das herz/like icon*/
-  #like {
+  #like,
+  #like2 {
     color: greenyellow;
   }
   /*für das kreuz/dislike icon*/
-  #dislike {
+  #dislike,
+  #dislike2 {
     color: red;
   }
   /*für das rückgängig icon*/
-  #undo {
+  #undo,
+  #undo2 {
     color: black;
   }
 /*für das nachrichten icon*/
-#message {
+#message,
+#message2 {
   color: lightblue;
 }
 /*animation für das like und dislike icon*/

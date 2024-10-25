@@ -53,6 +53,7 @@ function appendNewCard() {
 }
 
 function correct_ui_bar() {
+
   // Uncommend this if you want to use mode 1, because the icons are rendered separately
   /*
   var bar = document.getElementById("ui_menubar");
