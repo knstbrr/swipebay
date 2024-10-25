@@ -1,4 +1,4 @@
-let ui_mode = 1;
+let ui_mode = 0;
 
 class Card {
   constructor({
