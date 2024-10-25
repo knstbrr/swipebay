@@ -1,4 +1,4 @@
-let ui_mode = 0
+ let ui_mode = 1
 
 class Card {
   constructor({

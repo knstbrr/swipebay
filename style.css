@@ -258,19 +258,23 @@ body {
     width: 100%;
   }
 /*für das herz/like icon*/
-  #like {
+  #like,
+  #like2 {
     color: greenyellow;
   }
   /*für das kreuz/dislike icon*/
-  #dislike {
+  #dislike,
+  #dislike2 {
     color: red;
   }
   /*für das rückgängig icon*/
-  #undo {
+  #undo,
+  #undo2 {
     color: black;
   }
 /*für das nachrichten icon*/
-#message {
+#message,
+#message2 {
   color: lightblue;
 }
 /*animation für das like und dislike icon*/
