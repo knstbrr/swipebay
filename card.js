@@ -118,22 +118,21 @@ class Card {
   #handleRelease = () => {
     const horizontalThreshold = this.element.clientWidth * 0.3;
     const verticalThreshold = this.element.clientHeight * 0.3;
-
+  
     if (ui_mode === 1) {
       if (this.#offsetY > verticalThreshold) {
-        // Karte nach unten gezogen, führe Animation aus und lade Link
+        // Karte nach unten gezogen, Animation und Seitenweiterleitung ausführen
         this.#dismissWithAnimation();
-        window.location.href = "messages.html";
         return;
       }
       if (this.#offsetY < -verticalThreshold) {
-        // Karte nach oben gezogen, zurücksetzen
+        // Karte nach oben gezogen, nur zurücksetzen
         this.element.style.transform = '';
         this.#startPoint = null;
         return;
       }
     }
-
+  
     if (Math.abs(this.#offsetX) > horizontalThreshold) {
       // Nach links oder rechts gezogen, Aktion basierend auf Richtung
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
@@ -166,12 +165,15 @@ class Card {
       this.onDislike();
     }
   }
-
   #dismissWithAnimation = () => {
+    // Animation für das Herausgleiten der Karte nach unten
     this.element.style.transition = 'transform 0.5s ease-in-out';
     this.element.style.transform = 'translateY(100vh) scale(0.9)';
+  
+    // Nach Abschluss der Animation den Link aufrufen
     setTimeout(() => {
       this.element.remove();
-    }, 500);
+      window.location.href = "messages.html";
+    }, 500); // Die Dauer (500 ms) muss der Dauer der CSS-Animation entsprechen
   }
 }
