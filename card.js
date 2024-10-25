@@ -1,4 +1,4 @@
- let ui_mode = 1
+let ui_mode = 1
 
 class Card {
   constructor({
@@ -63,6 +63,9 @@ class Card {
       this.#startPoint = { x: clientX, y: clientY }
       document.addEventListener('mousemove', this.#handleMouseMove);
       this.element.style.transition = 'transform 0s';
+      if (ui_mode == 1) {
+        ui_1();
+      }
     });
 
     document.addEventListener('mouseup', this.#handleMoveUp);
@@ -89,6 +92,9 @@ class Card {
   }
 
   #handleMoveUp = () => {
+    if (ui_mode == 1) {
+      ui_0();
+    }
     if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
       // Trigger swipe after release and only if the threshold is passed
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
