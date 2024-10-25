@@ -1,4 +1,4 @@
-let ui_mode = 1
+let ui_mode = 1;
 
 class Card {
   constructor({
@@ -25,7 +25,7 @@ class Card {
       (navigator.msMaxTouchPoints > 0));
   }
 
-  // class erstellen und objekte//
+  // card element erstellen und initialisieren
   #init = () => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -48,9 +48,6 @@ class Card {
       this.#startPoint = { x: clientX, y: clientY }
       document.addEventListener('touchmove', this.#handleTouchMove);
       this.element.style.transition = 'transform 0s';
-      if (ui_mode == 1) {
-        ui_1();
-      }
     });
 
     document.addEventListener('touchend', this.#handleTouchEnd);
@@ -63,14 +60,9 @@ class Card {
       this.#startPoint = { x: clientX, y: clientY }
       document.addEventListener('mousemove', this.#handleMouseMove);
       this.element.style.transition = 'transform 0s';
-      if (ui_mode == 1) {
-        ui_1();
-      }
     });
 
     document.addEventListener('mouseup', this.#handleMoveUp);
-
-    // prevent card from being dragged
     this.element.addEventListener('dragstart', (e) => {
       e.preventDefault();
     });
@@ -83,8 +75,11 @@ class Card {
     this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
   }
 
-  // mouse event handlers
+  // Mouse Move Event Handler
   #handleMouseMove = (e) => {
+    if (ui_mode == 1) {
+      ui_1 ();
+    }
     e.preventDefault();
     if (!this.#startPoint) return;
     const { clientX, clientY } = e;
@@ -93,21 +88,17 @@ class Card {
 
   #handleMoveUp = () => {
     if (ui_mode == 1) {
-      ui_0();
+      ui_0 ();
     }
-    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
-      // Trigger swipe after release and only if the threshold is passed
-      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
-    } else {
-      // Reset the card position if not swiped
-      this.element.style.transform = '';
-      this.#startPoint = null;
-    }
+    this.#handleRelease();
     document.removeEventListener('mousemove', this.#handleMouseMove);
   }
 
-  // touch event handlers
+  // Touch Move Event Handler
   #handleTouchMove = (e) => {
+    if (ui_mode == 1) {
+      ui_1 ();
+    }
     if (!this.#startPoint) return;
     const touch = e.changedTouches[0];
     if (!touch) return;
@@ -117,17 +108,40 @@ class Card {
 
   #handleTouchEnd = () => {
     if (ui_mode == 1) {
-      ui_0();
+      ui_0 ();
     }
-    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
-      // Trigger swipe after release and only if the threshold is passed
+    this.#handleRelease();
+    document.removeEventListener('touchmove', this.#handleTouchMove);
+  }
+
+  // Freigabelogik für Thresholds oben und unten
+  #handleRelease = () => {
+    const horizontalThreshold = this.element.clientWidth * 0.3;
+    const verticalThreshold = this.element.clientHeight * 0.3;
+
+    if (ui_mode === 1) {
+      if (this.#offsetY > verticalThreshold) {
+        // Karte nach unten gezogen, führe Animation aus und lade Link
+        this.#dismissWithAnimation();
+        window.location.href = "messages.html";
+        return;
+      }
+      if (this.#offsetY < -verticalThreshold) {
+        // Karte nach oben gezogen, zurücksetzen
+        this.element.style.transform = '';
+        this.#startPoint = null;
+        return;
+      }
+    }
+
+    if (Math.abs(this.#offsetX) > horizontalThreshold) {
+      // Nach links oder rechts gezogen, Aktion basierend auf Richtung
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
     } else {
-      // Reset the card position if not swiped
+      // Karte zurücksetzen, wenn nicht stark genug gezogen
       this.element.style.transform = '';
       this.#startPoint = null;
     }
-    document.removeEventListener('touchmove', this.#handleTouchMove);
   }
 
   #dismiss = (direction) => {
@@ -151,5 +165,13 @@ class Card {
     if (typeof this.onDislike === 'function' && direction === -1) {
       this.onDislike();
     }
+  }
+
+  #dismissWithAnimation = () => {
+    this.element.style.transition = 'transform 0.5s ease-in-out';
+    this.element.style.transform = 'translateY(100vh) scale(0.9)';
+    setTimeout(() => {
+      this.element.remove();
+    }, 500);
   }
 }
