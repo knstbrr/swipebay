@@ -27,7 +27,7 @@ body {
 }
 /*navigationsleiste unten*/
 #navigation {
-    height: 45px; /* Mindesthöhe des Footers, die du anpassen kannst */
+    height: 8vh; /* Mindesthöhe des Footers, die du anpassen kannst */
     position: fixed; /* Fixiert das Menü am unteren Rand */
     bottom: 0;
     left: 0;
@@ -49,8 +49,8 @@ body {
 }
 /*anpassung der icons in der navigationsleiste*/
 #navigation img {
-    width: 35px; /* Breite der Icons */
-    height: 35px; /* Höhe der Icons */
+    width: 9vw; /* Breite der Icons */
+    height: 9vw; /* Höhe der Icons */
     transition: transform 0.2s; /* Sanfte Animation beim Hover */
 }
 /*vergrößerung beim hover über den icons der navigationsleiste*/
@@ -192,13 +192,22 @@ input[type="file"] {
   #dislike.trigger {
     animation-name: animation2;
   }
-
+/*für das like und dislike*/
+#ui_menu {
+  font-size: 15vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 45vh;
+  width: 100%;
+}
+/*für das undo und message*/
   #ui_menubar {
     font-size: 15vw;
     display: flex;
     justify-content: space-around;
     position: fixed;
-    bottom: 75px;
+    bottom: 8vh;
     width: 100%;
   }
   
