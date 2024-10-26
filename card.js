@@ -121,12 +121,12 @@ class Card {
     document.removeEventListener('mousemove', this.#handleMouseMove);
     document.removeEventListener('touchend', this.#handleTouchEnd);
     document.removeEventListener('touchmove', this.#handleTouchMove);
-    this.element.style.transition = 'transform 0.5s';
+    this.element.style.transition = 'transform 0.4s';
     this.element.style.transform = `translate(${direction * window.innerWidth * 2}px, ${this.#offsetY}px) rotate(${90 * direction}deg)`;
     this.element.classList.add('dismissing');
     setTimeout(() => {
       this.element.remove();
-    }, 500);
+    }, 200);
     if (typeof this.onDismiss === 'function') {
       this.onDismiss();
     }
