@@ -3,21 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (!localStorage.getItem('betaAlertShown')) {
-                alert("Willkommen zur Beta-Version unserer Website! Es können bugs noch sein viel spaß:)");
-                localStorage.setItem('betaAlertShown', 'true');
-            }
-        });
-    </script>
         <link rel="stylesheet" href="style.css">
         <title>Swipebay</title>
         <link rel="icon" type="image/x-icon" href="ui/logo2.png">
-        <form action="https://www.youtube.com/results?search_query=" method="get" target="_blank">
+        <form action="" method="get">
             <input id="suche" class="search-input" type="text" name="q" placeholder="Suchbegriff eingeben" required>
         </form>
-        
     </head>
 
 <body>
@@ -27,21 +18,13 @@
      
     <div id="ui_menubar">
         <ion-icon id="dislike" name="close-outline"></ion-icon>
-        <!--This line would display the previous image, but this function isn't implemented yet:--> <a href="back.html"><ion-icon id="undo" name="arrow-undo-outline"></ion-icon></a>
-        <a href="wha.html"> <ion-icon id="message" name="chatbubbles-outline"></ion-icon></a>
+        <!--This line would display the previous card, but this function isn't implemented yet:--> <ion-icon id="undo" name="arrow-undo-outline"></ion-icon>
+        <a href="messages.html"> <ion-icon id="message" name="chatbubbles-outline"></ion-icon></a>
         <ion-icon id="like" name="heart"></ion-icon>
-    </div>
-
-    <div id="ui_four_page">
-        <ion-icon id="dislike2" name="close-outline"></ion-icon>
-        <!--<ion-icon id="undo2" name="arrow-undo-outline"></ion-icon></a>-->
-        <ion-icon id="message2" name="chatbubbles-outline"></ion-icon></a>
-        <ion-icon id="like2" name="heart"></ion-icon>
     </div>
     
     <script src="card.js"></script>
     <script src="swipe.js"></script>
-    <script src="ui_switch.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

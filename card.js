@@ -1,5 +1,3 @@
-let ui_mode = 1;
-
 class Card {
   constructor({
     imageUrl,
@@ -25,7 +23,6 @@ class Card {
       (navigator.msMaxTouchPoints > 0));
   }
 
-  // card element erstellen und initialisieren
   #init = () => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -63,6 +60,8 @@ class Card {
     });
 
     document.addEventListener('mouseup', this.#handleMoveUp);
+
+    // prevent card from being dragged
     this.element.addEventListener('dragstart', (e) => {
       e.preventDefault();
     });
@@ -75,11 +74,8 @@ class Card {
     this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
   }
 
-  // Mouse Move Event Handler
+  // mouse event handlers
   #handleMouseMove = (e) => {
-    if (ui_mode == 1) {
-      ui_1 ();
-    }
     e.preventDefault();
     if (!this.#startPoint) return;
     const { clientX, clientY } = e;
@@ -87,18 +83,19 @@ class Card {
   }
 
   #handleMoveUp = () => {
-    if (ui_mode == 1) {
-      ui_0 ();
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
+      // Trigger swipe after release and only if the threshold is passed
+      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
+    } else {
+      // Reset the card position if not swiped
+      this.element.style.transform = '';
+      this.#startPoint = null;
     }
-    this.#handleRelease();
     document.removeEventListener('mousemove', this.#handleMouseMove);
   }
 
-  // Touch Move Event Handler
+  // touch event handlers
   #handleTouchMove = (e) => {
-    if (ui_mode == 1) {
-      ui_1 ();
-    }
     if (!this.#startPoint) return;
     const touch = e.changedTouches[0];
     if (!touch) return;
@@ -107,40 +104,15 @@ class Card {
   }
 
   #handleTouchEnd = () => {
-    if (ui_mode == 1) {
-      ui_0 ();
-    }
-    this.#handleRelease();
-    document.removeEventListener('touchmove', this.#handleTouchMove);
-  }
-
-  // Freigabelogik für Thresholds oben und unten
-  #handleRelease = () => {
-    const horizontalThreshold = this.element.clientWidth * 0.3;
-    const verticalThreshold = this.element.clientHeight * 0.3;
-  
-    if (ui_mode === 1) {
-      if (this.#offsetY > verticalThreshold) {
-        // Karte nach unten gezogen, Animation und Seitenweiterleitung ausführen
-        this.#dismissWithAnimation();
-        return;
-      }
-      if (this.#offsetY < -verticalThreshold) {
-        // Karte nach oben gezogen, nur zurücksetzen
-        this.element.style.transform = '';
-        this.#startPoint = null;
-        return;
-      }
-    }
-  
-    if (Math.abs(this.#offsetX) > horizontalThreshold) {
-      // Nach links oder rechts gezogen, Aktion basierend auf Richtung
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.3) {
+      // Trigger swipe after release and only if the threshold is passed
       this.#dismiss(this.#offsetX > 0 ? 1 : -1);
     } else {
-      // Karte zurücksetzen, wenn nicht stark genug gezogen
+      // Reset the card position if not swiped
       this.element.style.transform = '';
       this.#startPoint = null;
     }
+    document.removeEventListener('touchmove', this.#handleTouchMove);
   }
 
   #dismiss = (direction) => {
@@ -164,16 +136,5 @@ class Card {
     if (typeof this.onDislike === 'function' && direction === -1) {
       this.onDislike();
     }
-  }
-  #dismissWithAnimation = () => {
-    // Animation für das Herausgleiten der Karte nach unten
-    this.element.style.transition = 'transform 0.5s ease-in-out';
-    this.element.style.transform = 'translateY(100vh) scale(0.9)';
-  
-    // Nach Abschluss der Animation den Link aufrufen
-    setTimeout(() => {
-      this.element.remove();
-      window.location.href = "wha.html";
-    }, 500); // Die Dauer (500 ms) muss der Dauer der CSS-Animation entsprechen
   }
 }

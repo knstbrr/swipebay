@@ -6,130 +6,17 @@
     <title>Swipebay-Nachrichten</title>
     <link rel="icon" type="image/x-icon" href="ui/logo2.png">
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        .chat-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .chat-item {
-            background-color: #383838;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-        .chat-item:hover {
-            background-color: #474747;
-        }
-        .chat-item img {
-            border-radius: 50%;
-            margin-right: 10px;
-            vertical-align: middle;
-            color: #fff;
-        }
-        .chat-details {
-            display: inline-block;
-            vertical-align: middle;
-            color: #fff;
-        }
-        .chat-name {
-            font-weight: bold;
-            
-            color: #fff;
-        }
-        .chat-message {
-            color: #666;
-            color: #fff;
-        }
-        .chat-time {
-            padding: auto;
-            color: #999;
-            color: #fff;
-        }
-        .chat-content {
-            display: none;
-            padding: 10px;
-            background-color: #868686;
-            color:#fff ;
-        }
-        
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    </style>
 </head>
 <body>
 <div class="heading">
         <h1>Nachrichten</h1>
     </div>
-
-    <form action="https://www.youtube.com/results?search_query=" method="get" target="_blank">
-        <input class="search-input" type="text" name="q" placeholder="Suchbegriff eingeben" required>
-    </form>
-
-    <ul class="chat-list">
-
-        <li class="chat-item" onclick="toggleChat(0)">
-            <img src="avatar/handyhelga.png" alt="Handy Helga" width="40" height="40">
-            <div class="chat-details">
-                <span class="chat-name">Handy Helga</span>
-                <span class="chat-time">12:39</span>
-                <div class="chat-message">Leer</div>
-                <div class="chat-content">
-                </div>
-            </div>
-        </li>
-
-        <li class="chat-item" onclick="toggleChat(1)">
-            <img src="avatar/avatar1.png" alt="Gühnter" width="40" height="40">
-            <div class="chat-details">
-                <span class="chat-name">Gühnter</span>
-                <span class="chat-time">14:32</span>
-                <div class="chat-message">Nicht So Frech Bitte</div>
-            </div>
-            <div class="chat-content">
-                <p>G:Nicht so frech</p>
-                <p>Y: Was letzter Preis</p>
-            </div>
-        </li>
-        <li class="chat-item" onclick="toggleChat(2)">
-            <img src="avatar/dinkel.jpg" alt="Dinkel Dörte" width="40" height="40">
-            <div class="chat-details">
-                <span class="chat-name">Dinkel Dörte</span>
-                <span class="chat-time">13:15</span>
-                <div class="chat-message">Was Ist jetzt mit dem Brot</div>
-            </div>
-            <div class="chat-content">
-                <p>DD:Was Ist jetzt mit dem Brot</p>
-                <p>DD:Hallo</p>
-                <p>DD:Ich brauche eine anwort</p>
-                <p>DD:Ja</p>
-                <p>Y:Ist das Brot noch da</p>
-            </div>
-        </li>
-        <li class="chat-item" onclick="toggleChat(3)">
-            <img src="avatar/rick.jpg" alt="Rick" width="40" height="40">
-            <div class="chat-details">
-                <span class="chat-name">Rick</span>
-                <span class="chat-time">13:15</span>
-                <div class="chat-message">Hey du!</div>
-            </div>
-            <div class="chat-content"> 
-                <p>Leider kein rick mehr :)</p>                 
-            </div>
-        </li>
-    </ul>
-
-    <script>
-        function toggleChat(index) {
-            var chatContents = document.querySelectorAll('.chat-content');
-            chatContents[index].style.display = chatContents[index].style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
+    <div class="symbol">
+        <img src="ui/messages.png">
+    </div>
+    <div class="description">
+        <p>hier erscheinen deine Chats...</p>
+    </div>
     <footer>
         <div id="navigation">
             <a href="user.html"><img src="ui/user.png"></a>

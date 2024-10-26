@@ -54,22 +54,7 @@ function appendNewCard() {
   });
 }
 
-function correct_ui_bar() {
-  let ui_mode = 1;
-  // Uncommend this if you want to use mode 1, because the icons are rendered separately
-  if (ui_mode == 1) {
-    var bar = document.getElementById("ui_menubar");
-    bar.style.pointerEvents = 'none';
-    bar.style.opacity = 0;
-  }
-
-  var icons = document.getElementById("ui_four_page");
-  icons.style.pointerEvents = 'none';
-  icons.style.opacity = 0;  // Setzt die Sichtbarkeit auf unsichtbar
-}
-
 // first 5 cards
 for (let i = 0; i < 5; i++) {
   appendNewCard();
-  correct_ui_bar();
 }

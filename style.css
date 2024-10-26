@@ -179,9 +179,7 @@ input[type="file"] {
   }
 
   #like,
-  #dislike,
-  #like2,
-  #dislike2 {
+  #dislike {
     animation-name: animation1;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -203,47 +201,10 @@ input[type="file"] {
     bottom: 75px;
     width: 100%;
   }
-
-  #ui_four_page {
-    font-size: 15vw;
-    justify-content: space-around;
-    position: fixed;
-    /*Needed to change!*/transition: opacity 0.2s ease; /* Übergang für das Ein- und Ausblenden */
-  }
-
-  #like2 {
-    position: fixed; /* Um das Element relativ zum Viewport zu positionieren */
-    top: 50%; /* Setzt das Element in die Mitte des Bildschirms */
-    right: 0;
-    transform: translateY(-50%);
-  }
-
-  #dislike2 {
-    position: fixed; /* Um das Element relativ zum Viewport zu positionieren */
-    top: 50%; /* Setzt das Element in die Mitte des Bildschirms */
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  #undo2 {
-    position: fixed; /* Fixiert das Element relativ zum Viewport */
-    top: 5px; /* Fügt Abstand von 50px vom oberen Rand hinzu */
-    left: 50%; /* Positioniert das Element in der Mitte des Viewports */
-    transform: translateX(-50%); /* Verschiebt das Element horizontal um die Hälfte seiner Breite, um es mittig zu zentrieren */
-  }
-
-  #message2 {
-    position: fixed; /* Fixiert das Element relativ zum Viewport */
-    bottom: 10px; /* Fügt Abstand von 50px vom oberen Rand hinzu */
-    left: 50%; /* Positioniert das Element in der Mitte des Viewports */
-    transform: translateX(-50%); /* Verschiebt das Element horizontal um die Hälfte seiner Breite, um es mittig zu zentrieren */
-  }
   
   /*anpassung der icons*/
   #like,
-  #dislike,
-  #like2,
-  #dislike2 {
+  #dislike{
     animation-name: animation1;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -266,23 +227,19 @@ input[type="file"] {
     width: 100%;
   }
 /*für das herz/like icon*/
-  #like,
-  #like2 {
+  #like {
     color: greenyellow;
   }
   /*für das kreuz/dislike icon*/
-  #dislike,
-  #dislike2 {
+  #dislike {
     color: red;
   }
   /*für das rückgängig icon*/
-  #undo,
-  #undo2 {
+  #undo {
     color: black;
   }
 /*für das nachrichten icon*/
-#message,
-#message2 {
+  #message {
   color: lightblue;
 }
 /*animation für das like und dislike icon*/
